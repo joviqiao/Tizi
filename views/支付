@@ -1,0 +1,215 @@
+
+				
+				<div class="serverschoise">
+					<div class="optioncont">
+						<div style="text-align: left;width: 600px;height: 40px;float: left;">
+							<a class="serit senior">资深型</a>
+							<a class="serit junior activeon">通用型</a>
+						</div>
+
+						<button class="btn btn-default btn-sm pull-right color-tran" style="height: 38px;">
+							输入活动优惠码 <i class="fa fa-gift"></i>
+						</button>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="serverpayopt">
+					<div class="optioncont">
+						<h2 style="font-size: 25px;margin-bottom: 25px;color: #efefef;">请挑选你所中意的费用套餐：</h2>
+						<div class="serversoptpanel" id="choice1">
+							<div class="panelone">
+								<div class="optcontainer">
+									<span class="label label-info">入手体验</span>
+									<h3>体验会员</h3>
+									<span class="price">
+					                    <small>￥</small>
+					                    2
+					                </span>
+									<small class="duration">24小时</small>
+
+									<a href="" target="_blank" class="pay btn btn-block btn-primary">
+				                 		续费
+				                 		<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 2px;margin-left: -50px;"></i>
+				                    </a>
+
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+									</ul>
+									<a href="" target="_blank" style="float:left;margin-top: -30px;">翻墙后能做什么？</a>
+								</div>
+							</div>
+							<div class="panelone">
+								<div class="optcontainer suggest">
+									<span class="label label-danger ng-binding">省 10 元</span>
+									<h3>年费会员</h3>
+									<span class="price ng-binding"><small>￥</small>99</span>
+									<small class="duration">360天</small>
+									<a href="/pay/transfer?name=joveqiao@qq.com&amp;trade_type=360&amp;coupon_code=" ng-click="choosePlan(360, $event)" target="_blank" class="pay btn btn-block btn-success">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="可将任何网站加入科学上网列表" class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">
+					                            <b>限量专属服务器</b>
+					                        </span>
+										</li>
+										<li>
+											&nbsp;
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panelone">
+								<div class="optcontainer">
+									<span class="label label-info">最多人的选择</span>
+
+									<h3>月费会员</h3>
+									<span class="price ng-binding">
+					                    <small>￥</small>9
+					                </span>
+									<small class="duration">30天</small>
+
+									<a href="/pay/transfer?name=joveqiao@qq.com&amp;trade_type=30&amp;coupon_code=" ng-click="choosePlan(30, $event)" target="_blank" class="pay btn btn-block btn-primary">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="可将任何网站加入科学上网列表" class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">
+					                            <b>限量专属服务器</b>
+					                        </span>
+										</li>
+										<li>&nbsp;</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+						<div style="display: none;" class="serversoptpanel" id="choice2">
+							<div class="panelone">
+								<div class="optcontainer tuhaojin">
+									<span class="label label-info">入手体验</span>
+									<h3>体验会员</h3>
+									<span class="price">
+					                    <small>￥</small>3
+					                </span>
+									<small class="duration">24小时</small>
+
+									<a href="" target="_blank" class="pay btn btn-block btn-primary">
+				                 		续费
+				                 		<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 2px;margin-left: -50px;"></i>
+				                    </a>
+
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="可将任何网站加入科学上网列表" class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>&nbsp;</li>
+										<li>&nbsp;</li>
+									</ul>
+									<a href="" target="_blank" style="float:left;margin-top: -30px;">翻墙后能做什么？</a>
+								</div>
+
+							</div>
+							<div class="panelone">
+								<div class="optcontainer suggest2 tuhaojin">
+									<span class="label label-danger ng-binding">省 10 元</span>
+
+									<h3>年费会员</h3>
+									<span class="price ng-binding">
+					                    <small>￥</small>199
+					                </span>
+									<small class="duration">360天</small>
+
+									<a href="/pay/transfer?name=joveqiao@qq.com&amp;trade_type=360&amp;coupon_code=" ng-click="choosePlan(360, $event)" target="_blank" class="pay btn btn-block btn-success">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="可将任何网站加入科学上网列表" class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">
+					                            <b>限量专属服务器</b>
+					                        </span>
+										</li>
+										<li>
+											&nbsp;
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="panelone">
+								<div class="optcontainer tuhaojin">
+									<span class="label label-info">最多人的选择</span>
+
+									<h3>月费会员</h3>
+									<span class="price ng-binding">
+					                    <small>￥</small>19
+					                </span>
+									<small class="duration">30天</small>
+
+									<a href="/pay/transfer?name=joveqiao@qq.com&amp;trade_type=30&amp;coupon_code=" ng-click="choosePlan(30, $event)" target="_blank" class="pay btn btn-block btn-primary">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+
+									<hr>
+									<ul>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="可将任何网站加入科学上网列表" class="ng-scope">不限制使用的域名</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="开启后，上任何网站都使用红杏" class="ng-scope">开放“一直”模式</span>
+										</li>
+										<li>
+											<i class="glyphicon glyphicon-ok text-success"></i>
+											<span tooltip="严格限定单台服务器用户数，保证服务器有大量的空闲带宽" class="ng-scope">
+				                            <b>限量专属服务器</b>
+				                        </span>
+										</li>
+										<li>&nbsp;</li>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>

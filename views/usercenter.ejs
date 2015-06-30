@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" type="image/x-image" href="static/tiziico.png">
+		<title>tizi,最好用的翻墙解决方案</title>
+		<style>
+		</style>
+		<link rel="stylesheet" href="static/animate.css" charset="UTF-8" />
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" charset="UTF-8" />
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" charset="UTF-8" />
+		<link rel="stylesheet" href="static/tizi_all.css" charset="UTF-8" />
+
+		<script src="static/jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script src="static/jquery.mousewheel.min.js" type="text/javascript" charset="UTF-8"></script>
+		<script src="static/tizi_auth.js" type="text/javascript" charset="UTF-8"></script>
+		<style type="text/css">
+			body {
+					background: #F2F5E9;
+			}
+			.sercontent{
+				width: 100%;
+				height: 100%;
+				background: url(static/wall.png) repeat;
+			}
+			.toplinebox{
+				background-color: #F2F5E9;
+			}
+			pre {
+				  font-size: 0.9em;
+				  line-height: 120%;
+				  margin: 10px 0px;
+				  overflow-x: auto;
+				  color: #333;
+				    background: #eee;
+				}
+			.services{
+				width: 800px;
+				height: auto;
+				margin: 0 auto;
+				min-height: 750px;
+			}
+			.tobethecenter{
+				width: 800px;
+				height: auto;
+				margin: 0 auto;
+			}
+			.clear{
+				clear: both;
+			}
+			.contenttitle{
+				height: 52px;
+				margin-top: 50px;
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				font-size: 28px;
+				color:#555;
+				line-height: 52px;
+				display: inline-block;
+			}
+			.servericon{
+				width: 50px;
+				height: 51px;
+				margin-right: 15px;
+				background-image: url(static/server.png);
+				background-size:cover;
+				float: left;
+			}
+			.serveritem{
+				width: 780px;
+				height: 150px;
+				border-radius: 3px;
+				background-color: #ffffff;
+				box-shadow: 0 0 10px #cccccc;
+				margin: 50px 50px 0 0;
+			}
+			.serveritem:hover{
+				box-shadow: 0 0 20px #cccccc;
+			}
+			.itemleft{
+				width: 645px;
+				height:150px;
+				float:left;
+			}
+			.itemleftone{
+				width: 645px;
+				height:35px;
+				-moz-user-select: none;
+				-khtml-user-select: none;
+				user-select: none;
+			}
+			.theserver{
+				width: 35px;
+				height: 35px;
+				color: green;
+				font-size: 30px;
+				line-height: 35px;
+				margin-left: 5px;
+				margin-right: 5px;
+				display: inline-block;
+				float: left;
+			}
+			.servername{
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				width: 160px;
+				height: 35px;
+				line-height: 35px;				
+				font-size: 15px;
+				color:#444;
+				display: inline-block;
+				margin: 0 5px;
+				float: left;
+				white-space:nowrap;
+				overflow: hidden;
+
+			}
+			.timepromt{
+				white-space:nowrap;
+				width: 300px;
+				height: 35px;
+				float: left;
+				line-height: 35px;
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				font-size: 14px;
+			}
+			.timepromt span{
+				opacity: 0.6;
+			}
+			.itemlefttwo{
+				width: 645px;
+				height:115px;
+			}
+			.servertype{
+				width: 150px;
+				height:102px;
+				padding-top: 10px;
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				font-size: 28px;
+				display: inline-block;
+				color:#555555;
+				text-align: center;
+				-moz-user-select: none;
+				-khtml-user-select: none;
+				user-select: none;
+				float: left;
+				opacity: 0.7;
+			}
+			.contserv{
+				width: 495px;
+				height:115px;
+				display: inline-block;
+				float: left;
+			}
+			.serverset{
+				width: 450px;
+				height:105px;
+				margin: 9px 5px 1px 10px;
+				background-color: #f1f1f1;
+				box-shadow: 0 0 3px #F2F2F2;
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				font-size: 14px;
+				color: #333;
+				padding-left: 5px;
+				text-align: center;
+			}
+			.serverset table{
+				width: 400px;
+				height:100px;
+				margin-top: 5px;
+			}
+			.itemright{
+				width: 130px;
+				height:100px;
+				float:right;
+			}
+			.refee{
+				width:130px;
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-family: "Microsoft YaHei UI";
+				font-weight: lighter;
+				font-size: 20px;
+				cursor: pointer;
+				color: #ffffff;
+				background-color: #599C8F;
+				opacity: 0.8;
+				box-shadow: 0 0 10px #599C8E;
+				float: right;
+			}
+			.refee:hover{
+				box-shadow: 0 0 20px #599C8E;
+				opacity: 1;
+			}
+			.toright{
+				position: absolute;
+				border-style: solid;
+				border-left-width: 20px;
+				border-top-width: 50px;
+				border-bottom-width: 50px;
+				border-right-width: 20px;
+				border-color:transparent transparent transparent #599C8E;
+				margin-left: 50%;
+				left: 380px;
+			}
+			.beright{
+				text-align: right;
+			}
+			.becenter{
+				text-align: center;
+			}
+			.beleft{
+				text-align: left;
+			}
+			.lesspotion{
+				opacity: 0.7;
+			}
+			.addserver{
+				width: 780px;
+				height: 90px;
+				background-color: #f5f5f5;
+				margin: 50px 50px 0 0;
+				color: #C7B6A9;
+				text-align: center;
+			}
+			.addserver:hover{
+				border-radius: 3px;
+				box-shadow: 0 0 5px #599C8E;
+				background-color: #fff;
+				color: green;
+			}
+			.chiosebuy{
+				margin: 0 auto;
+				padding-top: 30px;
+			}
+			.alertceng{
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top:0;
+				left: 0;
+				background-color: #bbb;
+				display: none;
+			}
+			.tocenter{
+				margin: 0 auto;
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+			.payalert_pay{
+				position: fixed;
+				top:15px;
+				left: 50%;
+				margin-left: -300px;
+				z-index: 200;
+				display: none;
+				width: 600px;
+				height: 229px;
+				background-color: #fff;
+				border: 1px solid rgba(0,0,0,.2);
+			  border-radius: 6px;
+			}
+			.payalert_payisok{
+				height: 56px;
+				width: 600px;
+				text-align: center;
+				line-height: 56px;
+				border-bottom: 1px solid #e5e5e5;
+				font-family: "微软雅黑";
+				font-size: 18px;
+				font-weight: 500;
+				}
+			.payalert_close{
+				height: 21px;
+				width: 16px;
+				float: right;
+				font-size: 21px;
+				color: #999;
+			    text-shadow: 0 1px 0 #fff;
+				background-color: #fff;
+				border: 0;
+				padding: 0;
+				margin-top: 5px;
+				margin-right: 5px;
+				cursor:pointer;
+				
+			}
+
+			.payalert_twoalert{
+				width: 600px;
+				height: 56px;
+				border-bottom: 2px solid #E5E5E5;
+				line-height: 56px;
+			}
+			.payalert_isok{
+				float: left;
+				margin-left: 30px;
+				height:30px ;
+				width:260px ;
+				line-height: 30px;
+			}
+			.payalert_isnotok{
+				float: left;
+				margin-left: 20px;
+				height:30px ;
+				width:260px ;
+				line-height: 30px;
+			}
+			.payalert_submit{
+				border: 0;
+				padding: 0;
+				height: 34px;
+				width: 260px;
+				margin-top: 15px;
+				border-radius: 4px;
+				text-align: center;
+				background-color:#4cae4c;
+				font-size: 14px;
+				color: #FFFFFF;
+				font-family: "微软雅黑";
+				cursor:pointer;	
+			}
+			.payalert_white{
+				background-color:#fff;
+				color: #000;
+				border:1px solid #ccc ;
+			}
+			.payalert_Reminder{
+				font-size: 13px;
+				color: #999;
+				margin-top: 15px;
+				margin-left: 15px;
+				font-family: "微软雅黑";
+				background-color: #fff;
+			}
+			.payalert_submit:hover{
+				box-shadow: 0 0 10px #ccc;
+			}
+
+
+
+		</style>
+	</head>
+
+	<body class="chinese">
+		<div id="wrapper">
+			<div class="masthead comtainheit">
+				<div class="topline"></div>
+				<div class="useroption">
+					<div class="nowrap"><%= user.email%></div>
+					<div class="settingico"><i class="fa fa-cog"></i>
+					</div>
+				</div>
+				<div class="settingoption" style="display: none;">
+					<!-- <a href="">帐号设置</a>
+					<a href="">历史订单</a> -->
+					<!-- <a href="">站内通知&nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="notification"><i class="fa fa-bell-o bell shake animated"></i>&nbsp;<span class="notice">1</span></span></a> -->
+					<a href="/signout" rel="nofollow">退出</a>
+					
+				</div>
+				<div class="clearfix"></div>
+				
+				<div class="clearfix"></div>
+				<div class="sercontent">
+					<div class="toplinebox">
+						<div class="tobethecenter">
+							<div class="topmenucont">
+								<div class="tabs tabs-style-topline">
+									<nav>
+										<ul>
+											<li class="tab-current"><a href="#section-topline-1" class="icon icon-home "><span>主页</span></a>
+											</li><!-- 
+											<li><a href="#section-topline-2" class="icon icon-credit"><span>历史订单</span></a>
+											</li> -->
+											<li><a href="#section-topline-5" class="icon icon-config"><span>如何使用?</span></a>
+											</li>
+											<li><a href="#section-topline-4" class="icon icon-gift"><span>分享赢好礼</span></a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="services">
+						
+						<div class="contenttitle">
+							<div class="servericon"></div>
+							<span>服务列表:</span>
+						</div>
+						<div class="clear"></div>
+						
+<% user.socks.forEach(function(sockitem){%>
+						<div class="serveritem" id="<%=sockitem._id%>">
+							<div class="itemleft">
+								<div class="itemleftone">
+									<div class="theserver"><i class="fa fa-server "></i></div>
+									<div class="servername"><%=sockitem.name%></div>
+									<div class="timepromt">
+	<% var now = new Date();if(now.valueOf()<sockitem.enddate.valueOf()) {%>
+										<i class="timeback">20 Days 0 Hours 0 min 00 s</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>可用</span>
+										<script type="text/javascript">
+											var intDiff = parseInt(60);//倒计时总秒数量
+											function timer(intDiff){
+											    window.setInterval(function(){
+											    var day=0,
+											        hour=0,
+											        minute=0,
+											        second=0;//时间默认值        
+											    if(intDiff > 0){
+											        day = Math.floor(intDiff / (60 * 60 * 24));
+											        hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+											        minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+											        second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+											    }
+											    if (minute <= 9) minute = '0' + minute;
+											    if (second <= 9) second = '0' + second;
+												$('.timeback').html(day+" Day "+hour+" Hour "+minute+" min "+second+" s")
+											    intDiff--;
+											    }, 1000);
+											} 
+											$(function(){
+											    timer(<%= (sockitem.enddate.getTime() - now.getTime())/1000%>);
+											}); 
+										</script>
+	<% }else{ %>
+										<i class="timeback" style="text-decoration:line-through;">0 Day 0 Hour 0 min 00 s</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b style="color:red;">亲，快续费！</b>
+	<% }%>
+									</div>
+								</div>
+								<div class="itemlefttwo">
+	<% if(sockitem.viptype === "1") {%>
+									<div class="servertype" title="点击续费，可升级为高级版!"><i class="fa fa-graduation-cap"></i><br>学生版</div>
+	<% }else if(sockitem.viptype === "2"){ %>
+									<div class="servertype"><i class="fa fa-user-secret"></i><br>高级版</div>
+	<% }else{}%>
+									<div class="contserv">
+										<div class="serverset">
+	<% if(now.valueOf()<sockitem.enddate.valueOf()) {%>
+											<table >
+												<tr><td colspan=2 class="becenter"><a href="">获取帮助</a></td><td>|</td>
+													<td class="beright">Server IP :</td><td class="beright"><span class="sip"><%=sockitem.sip%></span></td></tr>
+												<tr><td class="beright lesspotion">Proxy Port :&nbsp;&nbsp;</td><td class="beleft lesspotion"><%=sockitem.lpt%></td><td>|</td>
+													<td class="beright">Server Port :</td><td class="beright"><span class="spt"><%=sockitem.spt%></span></td></tr>
+												<tr><td class="beright lesspotion">Encryption :&nbsp;&nbsp;</td><td class="beleft lesspotion"><%=sockitem.encry%></td><td>|</td>
+													<td class="beright">Password :</td><td class="beright"><span class="pwd"><%=sockitem.pwd%></span></td></tr>
+											</table>
+	<% }else{ %>
+										<span style="margin-top:45px;display:inline-block;">续费后才能使用哦~ <a href="">获取帮助</a></span>
+	<% }%>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="itemright">
+								<div class="refee" serid="<%=sockitem._id%>">续费</div>
+								<div class="toright"></div>
+							</div>
+						</div>
+						<div class="clearfix"></div>
+<% }) %>
+
+						<div class="addserver">
+							<i class="fa fa-plus-circle fa-5x"></i><br>创建服务
+						</div>
+					</div>
+				</div>
+			<div class="alertceng">	
+				<div class="chiosebuy">
+					<div class="serverschoise">
+						<div class="optioncont">
+							<div style="text-align: left;width: 600px;height: 40px;float: left;">
+								<a class="serit junior activeon"><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;学生版</a>
+								<a class="serit senior"><i class="fa fa-user-secret"></i>&nbsp;&nbsp;高级版</a>
+							</div>
+							<input id="couponcode" name="couponcode" class="btn btn-default btn-sm" placeholder=" 优惠码" style="height: 38px;margin-left:50px;" />
+							<button class="btn btn-default btn-sm pull-right color-tran payblog" style="height: 38px;">
+								关闭 <i class="fa fa-times"></i>
+							</button>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="serverpayopt">
+						<div class="optioncont">
+							<h2 style="font-size: 25px;margin-bottom: 25px;color: #efefef;">&nbsp;</h2>
+							<div class="serversoptpanel" id="choice1">
+								<div class="panelone">
+									<div class="optcontainer">
+										<span class="label label-info">入手体验</span>
+										<h3>体验会员</h3>
+										<span class="price">
+						                    <small>￥</small>
+						                    2
+						                </span>
+										<small class="duration">24小时</small>
+
+										<a href=""  money="2" target="_blank" class="gotopay pay btn btn-block btn-primary">
+					                 		续费
+					                 		<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 2px;margin-left: -50px;"></i>
+					                    </a>
+
+										<hr>
+										<ul>
+											<li>
+												<a href="" target="_blank" >翻墙后能做什么？</a>
+											</li>
+											<li>
+												&nbsp;
+											</li>
+										</ul>
+										<a href="" class="tocenter"><i class="fa fa-graduation-cap"></i><br>学生版</a>
+										
+									</div>
+								</div>
+								<div class="panelone">
+									<div class="optcontainer suggest">
+										<span class="label label-danger ng-binding">省 10 元</span>
+										<h3>年费会员</h3>
+										<span class="price ng-binding"><small>￥</small>99</span>
+										<small class="duration">360天</small>
+										<a href="/pay" money="99"  target="_blank" class="gotopay pay btn btn-block btn-success">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+										<hr>
+										<ul>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span tooltip="可访问任何网站" class="ng-scope"><b>不限制使用的域名</b></span>
+											</li>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span tooltip="默认智能翻墙，可以设置为全局翻墙！" class="ng-scope"><b>"全局" "智能" 双模式</b></span>
+											</li>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span class="ng-scope">
+						                            <b>多终端、多系统支持</b>
+						                        </span>
+											</li>
+										</ul>
+										<a href="" class="tocenter"><i class="fa fa-graduation-cap"></i><br>学生版</a>
+									</div>
+								</div>
+								<div class="panelone">
+									<div class="optcontainer">
+										<span class="label label-info">最多人的选择</span>
+
+										<h3>月费会员</h3>
+										<span class="price ng-binding">
+						                    <small>￥</small>9
+						                </span>
+										<small class="duration">30天</small>
+
+										<a href=""  money="9"  target="_blank" class="gotopay pay btn btn-block btn-primary">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+										<hr>
+										<ul>
+											<li>
+												&nbsp;
+											</li>
+											<li>
+												&nbsp;
+											</li>
+											
+										</ul>
+										<a href="" class="tocenter"><i class="fa fa-graduation-cap"></i><br>学生版</a>
+									</div>
+								</div>
+							</div>
+							<div style="display: none;" class="serversoptpanel" id="choice2">
+								<div class="panelone">
+									<div class="optcontainer tuhaojin">
+										<span class="label label-info">入手体验</span>
+										<h3>体验会员</h3>
+										<span class="price">
+						                    <small>￥</small>3
+						                </span>
+										<small class="duration" style="color:#fff;" >24小时</small>
+
+										<a href=""  money="3" target="_blank" class="gotopay pay btn btn-block btn-primary">
+					                 		续费
+					                 		<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 2px;margin-left: -50px;"></i>
+					                    </a>
+
+										<hr>
+										<ul>
+											<li>
+												&nbsp;
+											</li>
+											<li>
+												&nbsp;
+											</li>
+										</ul>
+										<a href="" class="tocenter"><i class="fa fa-user-secret"></i><br>高级版</a>
+									</div>
+
+								</div>
+								<div class="panelone">
+									<div class="optcontainer suggest2 tuhaojin">
+										<span class="label label-danger ng-binding">最 划 算</span>
+
+										<h3>年费会员</h3>
+										<span class="price ng-binding">
+						                    <small>￥</small>199
+						                </span>
+										<small class="duration" style="color:#fff;" >360天</small>
+
+										<a href=""  money="199"  target="_blank" class="gotopay pay btn btn-block btn-success">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+
+										<hr>
+										<ul>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span tooltip="默认智能翻墙，可以设置为全局翻墙！" class="ng-scope"><b>"全局" "智能" 双模式</b></span>
+											</li>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span  class="ng-scope"><b>专有服务器，保证网速</b></span>
+											</li>
+											<li>
+												<i class="glyphicon glyphicon-ok text-success"></i>
+												<span class="ng-scope">
+						                            <b>手机也能够翻墙！</b>
+						                        </span>
+											</li>
+										</ul>
+										<a href="" class="tocenter"><i class="fa fa-user-secret"></i><br>高级版</a>
+									</div>
+								</div>
+								<div class="panelone">
+									<div class="optcontainer tuhaojin">
+										<span class="label label-info">外贸家的选择</span>
+
+										<h3>月费会员</h3>
+										<span class="price ng-binding">
+						                    <small>￥</small>19
+						                </span>
+										<small class="duration" style="color:#fff;" >30天</small>
+
+										<a href="" class="gotopay" money="19" target="_blank" class="pay btn btn-block btn-primary">续费<i class="glyphicon glyphicon-chevron-right pull-right" style="margin-right:20px;margin-top: 3px;margin-left: -50px;"></i></a>
+
+										<hr>
+										<ul>
+											<li>
+												&nbsp;
+											</li>
+											<li>
+												&nbsp;
+											</li>
+										</ul>
+<a href="" class="tocenter"><i class="fa fa-user-secret"></i><br>高级版</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="payalert_pay">
+			<div class="payalert_payisok">
+				支付成功了么 ?
+				<button class="payalert_close">x</button>
+			</div>
+			<div class="payalert_twoalert">
+				<div class="payalert_isok">
+					<button class="payalert_submit">支付已成功</button>
+				</div>
+				<div class ="payalert_isnotok">
+					<button class="payalert_submit payalert_white">未成功，重新支付</button>
+				</div>
+			</div>
+			<div class="payalert_Reminder">
+				温馨提示
+			</div>
+		</div>
+				</div>
+				<div class="pcenter">
+					<p style="font-size: 15px;">
+						遵守<a href="" target="_blank">梯子准则</a>，请远离不良信息。
+					</p><span>(c) Copyright 2015 Tizi.in &nbsp;All Rights Reserved.</span>
+				</div>
+			</div>
+		</div>
+		<a href="" id="topayway" target="_blank"><span id="workFrame"></span></a>
+		<script type="text/javascript">
+			var serid = "";
+			var couponcode = "";
+			$(function(){
+				$(".payblog").click(function(){
+					$(".alertceng").hide();
+					var couponcode = "";
+					serid = "";
+				});
+				$(".refee").click(function(){
+					$(".alertceng").show();
+					serid = $(".refee").attr("serid");
+				});
+				$(".addserver").click(function(){
+					$(".alertceng").show();
+				});
+				$("#couponcode").blur(function(){
+					couponcode = $("#couponcode").val();
+				});
+				$(".gotopay").click(function(){
+					var money = $(this).attr("money");
+					$("#topayway").attr("href",'/paytoback?serid='+serid+'&couponcode='+couponcode+'&money='+money);
+					$("#workFrame").click();
+					$(".payalert_pay").show();
+					return false;
+				});
+			});
+		</script>
+	</body>
+
+</html>

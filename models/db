@@ -1,0 +1,73 @@
+mongod -dbpath "E:\0002_MongoDB\data\db"
+
+use tiziservice //创建项目数据库
+db.createCollection("users")
+db.users.insert({	email : "xx",
+					password : "xx",
+					socks : 
+						[{
+							name: "xxx",
+							scoksaccountid: "xx",
+							sip: "xxx",
+							spt: "xxx",
+							pwd: "xxx",
+							encry: "xxxx",
+							lpt: "xxx",
+							createdate : "xxx",
+							enddate : "xx",
+							status : "xx"
+						}],
+					orders : 
+						[{
+							orderid: "xxx",
+							buydate: "xxx",
+							packgename: "xxxx",
+							total: "xxx",
+							payment: "xxx",
+							paystatus: "xx",
+							couponcode: "xxx"
+							percent: 1,
+							cutmoney: 0
+						}],
+					notice :
+						[{
+							name： "xxx",
+							content: "xxxxx",
+							status: "xx",
+							notedate: "xxx"
+						}]
+					})
+					
+db.createCollection("scoksaccounts")
+db.scoksaccounts.insert({	
+							useremail: "xxx",
+							sip: "xxx",
+							spt: "xxx",
+							pwd: "xxx",
+							encry: "xxxx",
+							lpt: "xxx",
+							enddate : "xx",
+							status: "xx",
+							op: ""
+						})
+						
+db.createCollection("coupons")
+db.coupons.insert({	couponcode: "xxx"
+					percent: 1,
+					cutmoney: 0,
+					status: "xxx"
+					})
+
+
+我们最好借助一个叫node-inspector的工具包
+npm i -g node-inspector //安装node-inspector
+然后在cmd里运行
+node-inspector
+再新打开一个cmd，cd到项目hello-world目录下
+node --debug ./bin/www （或者 node --debug-brk ./bin/www , 旧版本express创建的node程序请使用 node --debug app.js）
+在浏览器里打开http://127.0.0.1:8080/debug?port=5858
+再新建窗口打开http://127.0.0.1:3000/
+就在浏览器可以调试服务器端代码。
+
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAABZCAIAAABACgogAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOcSURBVHhe7Z1RduMwDANz/0u3qaNIEACpF5h+7GuyTtzKIgkOGPf1E1+v5+v99Odf/WY+nAfkwZ/j8wB9K3t/fUme8XSK+ar5c9qp7YDP+9jPNn/7/GXrM3YuPUVdE32Teeq5pJdfzZZaH+rq6XvalRwXT5/l0tr2sstju6HuGL3MeVW4tGMNiVrdTLYaRO2oLyTkVSmptaY5qLXIqJUnqLVjN6CQq+BHIW99F82PtUO+OvS1ND+rRTYsUKWH7RgT8TUpXSSMtQfWOBpMyKbTtBJ97YhvhSPGULTZ0PW6vIRaS63dWlWi1svqG/eWp55YqznqEpSnFFozLVFrRSFrDQx5pHyilqhdW+Ek3FQPp56CRkGjoFHfPELzY14htZZauwFarbgo5OUKX0jFKYaUZRoYmf+FPYA94JvMNkci8TyAqHWNA2hc26omn9pcgixIyCRkEvKzApk2EoJmcVK7AmSx1vGeb2HIKORlPNzdqxMW1halmobqPWSYzmAlaona7VMUMGQYMgwZhrxb49phgyy8a6LWDjmiaKr2D7aPdCuZSAFZ1HYLZAGyAFmALKQ8WwuHPYA9wKfiJUNUvarFFRoFjXIGng1PCtLUYrqTUgv/vScKWcmlrnIdbYRGQaOgUdAoaFQtSDg/ND/cpuSr9RXDAhpVTyGjkFHIKGQUMgoZlbZSAjIYMgwZhgxDzmx5mROeBzPRqOOVyo1hyNstcBSg6+6x6VSGVblNSbnTdx1dnkQMUw9TD1MvWt4LCcridIohEjIJmYT8RAEKOcWa8QQzqWxGIhOSqUKmLLhp7uJRDNCMtajjMjlbg/OD84Pzg/OD84Pzg/OzKXbVpRUbJbm9F11qLbWWWkutpdZSa6m11Npvp67TNNXytHBRfmYipTL6kxF2YpNGCex0pnqM3uXByKjt+qb1r7KQS3vaXvi1+LX4tfi18qfZcX5wfnB+WkCkz4PzgxU/lHi2noottVnAih+Kow5y2DrWzo3mh+anT0KRkEnIJGS5sTw06g7arL7Q/ND80PzQ/CSshyHDkI9/8HtWWRtG+XfM+jK8Uk2n2mXaLLhdJ1UAdZKGARoGaBigCQ8gS0CajBr36Qcr3wBZgCxAFs8esHJVKWD60hqOl5cQtXcJYjnMkpbGKJ/5GatRRROgEdAIaAQ07vdruihEQOMKF0y9TQxzg3qQxaa2UMim9mv3rK2EcTHryxWB5fcpmLNxt3j9PPwFSh9dhg3x/t0AAAAASUVORK5CYII=">
